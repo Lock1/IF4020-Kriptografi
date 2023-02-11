@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  
+
+  
+
+  <div class="main-banner wow fadeIn" id="rc4" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h6>Tucil 3 IF 4020</h6>
+                    <h2>Modifikasi RC4 dan Steganografi</h2>
+                    <p> 13519141 - Naufal Yahya Kurnianto<br>
+                        13519211 - Muhammad Alfandavi Aryo Utomo<br>
+                        13519214 - Tanur Rizaldi Rahardjo<br>
+                    </p>
+
+                    <p>Program stream cipher yang memodifikasi RC4 (KSA/PRGA) sehingga bisa melakukan enkripsi dan dekripsi pada file atau input pengguna</p>
+                    <p>
+                        Spesifikasi program adalah sebagai berikut:<br>
+                        1. Program dapat menerima pesan berupa file sembarang (file text maupun file biner) atau
+                        pesan yang diketikkan dari papan-ketik. <br>
+                        2. Program dapat mengenkripsi plainteks dan mendekripsi cipherteks menjadi plainteks
+                        semula.<br>
+                        3. Untuk pesan berupa text, program dapat menampilkan plainteks dan cipherteks di layar.<br>
+                        4. Program dapat menyimpan cipherteks ke dalam file. <br>
+                        5. Kunci dimasukkan oleh pengguna. Panjang kunci bebas<br>
+                    </p>
+
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="border-first-button scroll-to-section">
+                      <a href="{{ url_for('page_rc4') }}">Stream Cipher RC4</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="{{url_for('static', filename='images/undraw_unlock_24mb.svg')}}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="steg" class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="{{url_for('static', filename='images/undraw_treasure_of9i.svg')}}" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="about-right-content">
+                <div class="section-heading">
+                  <h6>TUCIL 3 IF 4020</h6>
+                  <h4>Steganografi <em>Audio & Video</em></h4>
+                  <div class="line-dec"></div>
+                </div>
+                <p>Program Steganografi yang bertujuan untuk menyembunyikan pesan pada berkas multimedia (audio dan video)</p>
+                <p>
+                    Spesifkasi program:<br>
+                    1. Program menerima masukan berupa citra digital dengan format BMP atau PNG, berkas
+                    audio/video (pilih salah satu), nama file pesan, dan kunci stego (opsional, jika pengguna
+                    memilih untuk mengenkripsi pesan dan/atau jika memilih penyisipan secara acak).<br>
+                    2. Metode steganografi yang digunakan adalah metode LSB.<br>
+                    3. Pengguna dapat memilih apakah pesan dienkripsi atau tidak dienkripsi sebelum
+                    disisipkan.<br>
+                    4. Pesan disisipkan secara sekuensial pada pixel-pixel citra atau acak.<br>
+                    5. Untuk citra, hitung PSNR setelah penyisipan. Untuk audio/video, hitung pengukuran
+                    fidelity-nya (silakan cari rumus untuk menghitungnya).<br>
+                </p>
+                <div class="col-lg-12">
+                    <div class="border-first-button scroll-to-section">
+                      <a href="{{ url_for('page_stegano') }}">Steganografi</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Contact Me</h6>
+            <h4>Get In Touch With Me <em>Now</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="contact-dec">
+                  <img src="{{url_for('static', filename='images/contact-dec-v3.png')}}" alt="">
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div id="map">
+                  <iframe src="https://maps.google.com/maps?q=institut%20teknologi%20bandung&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="636px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="fill-form">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img src="{{url_for('static', filename='images/phone-icon.png')}}" alt="">
+                          <a href="https://wa.me/089515010969">089515010969</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img src="{{url_for('static', filename='images/email-icon.png')}}" alt="">
+                          <a href="mailto:13519211@std.stei.itb.ac.id">13519211@std.stei.itb.ac.id</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="info-post">
+                        <div class="icon">
+                          <img src="{{url_for('static', filename='images/location-icon.png')}}" alt="">
+                          <a href="https://www.google.com/maps/place/Institut+Teknologi+Bandung,+Jl.+Ganesa+No.10,+Lb.+Siliwangi,+Kecamatan+Coblong,+Kota+Bandung,+Jawa+Barat+40132/@-6.89148,107.6106591,17z/data=!4m2!3m1!1s0x2e68e65767c9b183:0x2478e3dcdce37961">Insitut Teknologi Bandung</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
+                      </fieldset>
+                      <fieldset>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+                      </fieldset>
+                      <fieldset>
+                        <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                      <fieldset>
+                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <!-- <div class="col-lg-12">
+                      <fieldset>
+                        <button type="#" id="#" class="#">Send Message Now</button>
+                      </fieldset>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2022 DigiMedia Co., Ltd. All Rights Reserved.
+          <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+    <!-- <form method="POST" action="/">
+        <input type="text" placeholder="first-name" name="first_name">
+        <input type="text" placeholder="last-name" name="last_name">
+        <input type="submit">
+    </form> -->
+
+
+    <script src="{{url_for('static', filename='js/animation.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+    <script src="{{url_for('static', filename='js/imagesloaded.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/owl-carousel.js')}}"></script>
+{% endblock content %}

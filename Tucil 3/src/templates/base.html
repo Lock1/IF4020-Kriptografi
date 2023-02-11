@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/templatemo-digimedia-v3.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+
+
+    <title>RC4 Modification and Steganography</title>
+</head>
+<body>
+    <!-- Pre-header Starts -->
+  <div class="pre-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-7">
+          <ul class="info">
+            <li><a href="mailto:13519211@std.stei.itb.ac.id"><i class="fa fa-envelope"></i>13519211@std.stei.itb.ac.id</a></li>
+            <li><a href="https://wa.me/089515010969"><i class="fa fa-phone"></i>089515010969</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-5">
+          <ul class="social-media">
+            <li><a href="https://www.linkedin.com/in/muhammad-alfandavi-aryo-utomo-a8b617140/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/AlfandaviAU"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/alfan.davv/"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pre-header End -->
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="{{ url_for('main') }}" class="active">Van App</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('page_rc4') }}" >RC4</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('page_stegano') }}">Steganografi</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('page_fidelity') }}">Fidelity</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('main') }}">Services</a></li>
+              <li class="scroll-to-section"><div class="border-first-button"><a href="{{ url_for('main') }}">Contact Me</a></div></li>
+            </ul>
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+    {% block content %}
+
+    {% endblock content %}
+
+    <!-- {% for i in list_of_names %}
+        <ul>
+            <li>{{ i }}</li>
+        </ul>
+    {%endfor%} -->
+</body>
+</html>

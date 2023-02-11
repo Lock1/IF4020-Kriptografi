@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Our <em>Services</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                        <div>
+                          <div class="thumb">
+                            <div class="row">
+                              <div class="col-lg-6 align-self-center">
+                                <div class="left-text">
+                                  <h4>Steganografi</h4>
+                                  <form method="POST" action="/enc_stegano" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <label for="file"><h5>Cover object (.png, .wav)</h5></label>
+                                      <br>
+                                        <input type="file" id="file" name="cover-file" accept=".png, .wav" required>
+                                        <br>
+                                      <br>
+                                      <label for="file"><h5>Embedded message</h5></label><br>
+                                        <input type="file" id="file" name="embed-file" required><br>
+
+                                      <label for="key">Kunci stego</label><br>
+                                        <input type="text" id="key" name="key">
+
+                                      <br>
+                                      <input type="radio" id="no-enc" name="metode-steg" value="no-enc">
+                                      <label for="no-enc">Tanpa enkripsi</label>
+                                      <input type="radio" id="with-enc" name="metode-steg" value="with-enc" required>
+                                      <label for="with-enc">RC4</label>
+                                      <div class="buttonasu" style="padding-top: 20px">
+                                        <input type="submit" value="Encrypt">
+                                      </div>
+                                      <br>
+                                    </div>
+                                  </form>
+                                  <h4>Ekstraksi</h4>
+                                  <form method="POST" action="/dec_stegano" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <label for="file"><h5>Stego object (.png, .wav)</h5></label><br>
+                                        <input type="file" id="file" name="file" accept=".png, .wav" required><br>
+                                      <div class="buttonasu" style="padding-top: 20px">
+                                        <input type="submit" value="Decrypt">
+                                      </div>
+                                      <br>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                              <div class="col-lg-6 align-self-center">
+                                <div class="right-image">
+                                  <img src="{{url_for('static', filename='images/undraw_attached_file_re_0n9b.svg')}}" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
