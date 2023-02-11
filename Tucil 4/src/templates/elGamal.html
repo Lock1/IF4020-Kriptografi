@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Our <em>Services</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                        <div>
+                          <div class="thumb">
+                            <div class="row">
+                              <div class="col-lg-6 align-self-center">
+                                <div class="left-text">
+                                  <h4>El Gamal</h4>
+                                  <form method="POST" action="/enc_elGamal" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <label for="data">Input Data</h5></label>
+                                      <br>
+                                        <input type="text" id="p" name="p" placeholder="input p" required><br>
+                                        <input type="text" id="g" name="g" placeholder="input g" required><br>
+                                        <input type="text" id="x" name="x" placeholder="input x" required><br>
+                                        <input type="text" id="k" name="k" placeholder="input k" required><br>
+                                      <br>
+                                      <label for="plainteks">Plainteks</label><br>
+                                        <input type="text" id="plainteks" name="plainteks">
+                                      <br>
+                                      <div class="buttonasu" style="padding-top: 20px">
+                                        <input type="submit" value="Encrypt">
+                                      </div>
+                                      <br>
+                                    </div>
+                                  </form>
+                                  <h4>Ekstraksi</h4>
+                                  <form method="POST" action="/dec_elGamal" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <label for="data">Input Data</h5></label>
+                                      <br>
+                                        <input type="text" id="p" name="p" placeholder="input p" required><br>
+                                        <input type="text" id="g" name="g" placeholder="input g" required><br>
+                                        <input type="text" id="x" name="x" placeholder="input x" required><br>
+
+                                      <br>
+                                      <label for="ciphertext">Cipherteks</label><br>
+                                        <input type="text" id="ciphertext" name="ciphertext">
+                                      <br>
+                                      <div class="buttonasu" style="padding-top: 20px">
+                                        <input type="submit" value="Decrypt">
+                                      </div>
+                                      <br>
+                                    </div>
+                                  </form>
+                                  {% if res != "" %}
+                                  <div>
+                                      <h4>Hasil</h4>
+                                      <input type="text" value="{{res}}" readonly>
+                                  </div>
+                                  {% endif %}
+                                </div>
+                              </div>
+                              <div class="col-lg-6 align-self-center">
+                                <div class="right-image">
+                                  <img src="{{url_for('static', filename='images/undraw_attached_file_re_0n9b.svg')}}" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}

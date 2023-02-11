@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Our <em>Services</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                        <div>
+                          <div class="thumb">
+                            <div class="row">
+                              <div class="col-lg-6 align-self-center">
+                                <div class="left-text">
+                                  <h4>Keygen</h4>
+
+                                  <form method="POST" action="/keygen_rsa" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <h5>Generate RSA</h5>
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                  </form>
+                                  <br><br>
+
+                                  <form method="POST" action="/keygen_elgamal" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <h5>Generate ElGamal</h5>
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                  </form>
+                                  <br><br>
+
+                                  <form method="POST" action="/keygen_paillier" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <h5>Generate Paillier</h5>
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                  </form>
+                                  <br><br>
+
+                                  <form method="POST" action="/keygen_ecc" class="form-diy" enctype="multipart/form-data">
+                                    <div class="form-diy" style="font-size: 15px;line-height: 30px;font-weight: 300;color: #afafaf;">
+                                      <h5>Generate ECEG</h5>
+                                      <label for="plainteks">a</label><br>
+                                      <input type="text" id="a" name="a"><br>
+                                      <label for="plainteks">b</label><br>
+                                      <input type="text" id="b" name="b"><br>
+                                      <label for="plainteks">p</label><br>
+                                      <input type="text" id="p" name="p"><br>
+                                      <label for="plainteks">base x</label><br>
+                                      <input type="text" id="basex" name="basex"><br>
+                                      <label for="plainteks">base y</label><br>
+                                      <input type="text" id="basey" name="basey"><br>
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                  </form>
+                                  <br><br>
+
+
+                                  <br><br>
+                                  {% if result != "" %}
+                                  <div>
+                                      <h4>Hasil</h4>
+                                      <input type="text" value="{{result}}" readonly>
+                                  </div>
+                                  {% endif %}
+                                </div>
+                              </div>
+                              <div class="col-lg-6 align-self-center">
+                                <div class="right-image">
+                                  <img src="{{url_for('static', filename='images/undraw_Lost_online_re_upmy.svg')}}" alt="">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
